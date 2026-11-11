@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SR Qualitative Picker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header id="topbar">
+  <div class="brand">SR&nbsp;Qualitative&nbsp;Picker</div>
+  <label class="ds-pick">Dataset
+    <select id="ds-select"></select>
+  </label>
+  <nav id="tabs">
+    <button data-view="browse" class="active">1 · Browse &amp; Filter</button>
+    <button data-view="compare">2 · Compare (loupe)</button>
+    <button data-view="figure">3 · Figure <span id="pick-count" class="badge">0</span></button>
+    <button data-view="summary">4 · Summary</button>
+  </nav>
+  <div id="save-status" class="muted">loading…</div>
+</header>
+
+<main>
+  <section id="view-browse" class="view active"></section>
+  <section id="view-compare" class="view"></section>
+  <section id="view-figure" class="view"></section>
+  <section id="view-summary" class="view"></section>
+</main>
+
+<div id="toast"></div>
+
+<script src="/static/core.js"></script>
+<script src="/static/browse.js"></script>
+<script src="/static/compare.js"></script>
+<script src="/static/figure.js"></script>
+<script src="/static/summary.js"></script>
+<script>App.boot();</script>
+</body>
+</html>
